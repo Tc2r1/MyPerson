@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Find My Soulmate Wishlist - List Partners</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(partners)}">
+        <h2>Partners List</h2>
+        <table class="table table-striped">
+            <tr>
+
+                <th>Id</th>
+                <th>Sex</th>
+                <th>Ethnicity</th>
+                <th>Body Build</th>
+                <th>Height</th>
+                <th>Religion</th>
+                <th>Occupation</th>
+                <th>Education Level</th>
+                <th>Min Age</th>
+                <th>Max Age</th>
+                <th>Show</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="partner : ${partners}">
+                <td th:text="${partner.id}"></td>
+                <td th:text="${partner.sex}"></td>
+                <td th:text="${partner.ethnicity}"></td>
+                <td th:text="${partner.build}"></td>
+                <td th:text="${partner.height}"></td>
+                <td th:text="${partner.religion}"></td>
+                <td th:text="${partner.occupation}"></td>
+                <td th:text="${partner.educationLevel}"></td>
+                <td th:text="${partner.ageMin}"></td>
+                <td th:text="${partner.ageMax}"></td>
+                <td><a th:href="${'/partner/show/' + partner.id}">View</a> </td>
+                <td><a th:href="${'/partner/edit/' + partner.id}">Edit</a> </td>
+                <td><a th:href="${'/partner/delete/' + partner.id}">Delete</a> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="/partner/new">New Partner</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
