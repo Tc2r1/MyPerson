@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 /**
- * Created by tc2r on 02/11/20.
+ * Created by tc2r on 02/11/2020.
  */
 @RequestMapping("/partner")
 @Controller

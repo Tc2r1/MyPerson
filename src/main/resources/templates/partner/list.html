@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Find My Soulmate Wishlist - List Partners</title>
+    <title>Find My Ideal Partner - List Ideal Partners</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
@@ -14,10 +14,11 @@
     <link href="../../static/css/spring-core.css"
           th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
 </head>
+
 <body>
 <div class="container">
     <div th:if="${not #lists.isEmpty(partners)}">
-        <h2>Partners List</h2>
+        <h2>Ideal Partners</h2>
         <table class="table table-striped">
             <tr>
 
@@ -60,4 +61,6 @@
 </div>
 
 </body>
+
+
 </html>

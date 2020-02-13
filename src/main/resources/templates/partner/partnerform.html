@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Find My Soulmate Wishlist - Partner Form</title>
+    <title>Find My Ideal Partner - Partner Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
@@ -17,62 +17,77 @@
 <body>
 <div class="container">
 
-    <h2>Customer Details</h2>
+    <h2>Tell Us About Your Ideal / Perfect Partner!</h2>
+    <h3>Here are some basic details required details to help you figure out what you want from your ideal partner.</h3>
     <div>
-        <form class="form-horizontal" th:object="${partner}" th:action="@{/customer}" method="post">
+        <form class="form-horizontal" th:object="${partner}" th:action="@{/partner}" method="post">
             <input type="hidden" th:field="*{id}"/>
             <div class="form-group">
-                <label class="col-sm-2 control-label">First Name:</label>
+                <label class="col-sm-2 control-label">Male or Female?:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{firstName}"/>
+                    <input type="text" class="form-control" th:field="*{sex}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Last Name:</label>
+                <label class="col-sm-2 control-label">Ethnicity:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{lastName}"/>
+                    <input type="text" class="form-control" th:field="*{ethnicity}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Email:</label>
+                <label class="col-sm-2 control-label">Body Type:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{email}"/>
+                    <input type="text" class="form-control" th:field="*{build}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Phone:</label>
+                <label class="col-sm-2 control-label">Preferred Height:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{phoneNumber}"/>
+                    <input type="text" class="form-control" th:field="*{height}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Address Line 1:</label>
+                <label class="col-sm-2 control-label">Preferred Religion:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{addressLine1}"/>
+                    <input type="text" class="form-control" th:field="*{religion}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Address Line 2:</label>
+                <label class="col-sm-2 control-label">Occupation Field:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{addressLine2}"/>
+                    <input type="text" class="form-control" th:field="*{occupation}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">City:</label>
+                <label class="col-sm-2 control-label">Minimal Level Of Education?:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{city}"/>
+                    <input type="text" class="form-control" th:field="*{educationLevel}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">State:</label>
+                <label class="col-sm-2 control-label">Min Age:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{state}"/>
+                    <input type="text" class="form-control" th:field="*{ageMin}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Zip Code:</label>
+                <label class="col-sm-2 control-label">Max Age:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{zipCode}"/>
+                    <input type="text" class="form-control" th:field="*{ageMax}"/>
+                </div>
+            </div>
+
+
+<!--            // BE NICE TO HAVE SOME TYPE OF BREAK HERE OR SEPERATOR -->
+<!--            SO WE CAN MAKE THIS IT'S OWN DISTINGISHABLE NEW AREA-->
+
+            <h2> What are the Qualities your perfect partner would have?</h2>
+            <h3> Write down only the qualities and traits that are really important to you. If you have past lovers with whom you have happy memories (or perhaps you are still friends), think about the qualities that you appreciate most about them, as it might provide a clue as to the type of person you are ready to manifest now. Take as much time as you need to create your list, making it as short or as long as you would like.
+                Type them here, seperated by a comma. ie: "vegan, turtle-lover, consistant"</h3>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Qualities and Traits:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{qualitiesAndTraits}"/>
                 </div>
             </div>
             <div class="row">

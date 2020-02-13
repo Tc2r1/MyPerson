@@ -20,12 +20,13 @@ public class Partner implements DomainObject
   private String sex;
   private String ethnicity;
   private String build;
-  private int height;
+  private String height;
   private String religion;
   private String occupation;
   private String educationLevel;
   private int ageMin;
   private int ageMax;
+  private String qualitiesAndTraits;
 
 
 
@@ -89,13 +90,13 @@ public class Partner implements DomainObject
     this.build = build;
   }
 
-  public int getHeight()
+  public String getHeight()
   {
 
     return height;
   }
 
-  public void setHeight(int height)
+  public void setHeight(String height)
   {
 
     this.height = height;
@@ -159,5 +160,17 @@ public class Partner implements DomainObject
   {
 
     this.ageMax = ageMax;
+  }
+
+  public String getQualitiesAndTraits()
+  {
+
+    return qualitiesAndTraits;
+  }
+
+  public void setQualitiesAndTraits(String qualitiesAndTraits)
+  {
+
+    this.qualitiesAndTraits = qualitiesAndTraits;
   }
 }

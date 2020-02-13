@@ -18,14 +18,6 @@ import javax.persistence.EntityManager;
 @Profile("jpadao")
 public class PartnerServiceJPADaoImpl extends AbstractJpaDaoService implements PartnerService
 {
-
-    private EncryptionService encryptionService;
-
-    @Autowired
-    public void setEncryptionService(EncryptionService encryptionService) {
-        this.encryptionService = encryptionService;
-    }
-
     @Override
     public List<Partner> listAll() {
         EntityManager em = emf.createEntityManager();
@@ -45,11 +37,6 @@ public class PartnerServiceJPADaoImpl extends AbstractJpaDaoService implements P
         EntityManager em = emf.createEntityManager();
 
         em.getTransaction().begin();
-
-        if (domainObject.getUser() != null && domainObject.getUser().getPassword() != null) {
-            domainObject.getUser().setEncryptedPassword(
-                    encryptionService.encryptString(domainObject.getUser().getPassword()));
-        }
 
         Partner savedPartner = em.merge(domainObject);
         em.getTransaction().commit();

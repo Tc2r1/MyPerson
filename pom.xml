@@ -8,11 +8,11 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.desired</groupId>
+	<groupId>com.ideal</groupId>
 	<artifactId>partner</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>partner</name>
-	<description>Project that helps user targert their desired partner. </description>
+	<description>Project that helps user target their ideal partner. </description>
 
 	<properties>
 		<java.version>1.8</java.version>

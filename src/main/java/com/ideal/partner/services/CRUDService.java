@@ -3,7 +3,7 @@ package com.ideal.partner.services;
 import java.util.List;
 
 /**
- * Created by tc2r on 12/19/19.
+ * Created by tc2r on 02/11/2020.
  */
 public interface CRUDService<T> {
     List<?> listAll();
